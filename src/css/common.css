@@ -444,7 +444,7 @@ header #top .top_second_floor .second_floor_third strong {
 }
 
 .modal-wrapper .modal .modal-content div {
-    background: lightgray;
+    background: rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -457,13 +457,20 @@ header #top .top_second_floor .second_floor_third strong {
 }
 
 .modal-wrapper .modal .modal-content div a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 6.25rem;
     height: 2.5rem;
     background: lightskyblue;
     text-decoration: none;
     color: black;
     border-radius: 5px;
+}
+
+.modal-wrapper .modal .modal-content div a:hover {
+    color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(54, 171, 243, 0.8) 0px 0px 0px 40px inset;
 }
 
 .modal .modal-close {
@@ -732,13 +739,13 @@ header #top .top_second_floor .second_floor_third strong {
     left: 5px;
     bottom: 10px;
     border: 1px solid rgba(0, 0, 0, 0.3);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .navigation_container #toggle-wrapper #toggle {
-    display: none; /* flex */
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     width: 20px;
@@ -814,7 +821,7 @@ footer span {
     .container {
         width: 100%;
     }
-    .navigation_container #toggle-wrapper #toggle {
+    .navigation_container #toggle-wrapper {
         display: flex;
     }
     .navigation_container .nav_wrapper {
@@ -872,7 +879,7 @@ footer span {
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.664);
     }
-    .contact-container .contact-wrapper .media-wrapper .contact-item .link {
+    .contact-container .contact-wrapper .media-wrapper .contact-item .link, .m-link {
         text-decoration: none;
         color: black;   
     }

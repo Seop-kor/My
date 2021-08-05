@@ -22,7 +22,7 @@ function AboutMe() {
         const list = document.getElementsByClassName("card");
         Array.from(list).forEach((item, index) => {
             let a;
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('mouseenter', (e) => {
                 a = new Progress.Circle('#' + item.childNodes[1].id, {
                     strokeWidth: 4,
                     trailWidth: 1,
@@ -42,12 +42,17 @@ function AboutMe() {
                         }
                     }
                 });
+                const text = document.createElement("div");
+                text.textContent = "숙련도";
+                text.className = "progressbar-info";
+                e.target.childNodes[1].append(text);
                 a.animate(delay[index]);
             });
 
-            item.addEventListener('mouseleave', () => {
+            item.addEventListener('mouseleave', (e) => {
+                e.target.childNodes[1].querySelector(".progressbar-info").remove();
                 a.destroy();
-            })
+            });
         });
     }, []);
     return (

@@ -15,9 +15,9 @@ function App() {
       <div className="container">
         <div id="checknav-wrapper">
           <div id="checknav">
-              <Link to="/">About Me</Link>
-              <Link to="/project">Project</Link>
-              <Link to="/Contact">Contact</Link>
+              <Link to="/My/">About Me</Link>
+              <Link to="/My/project">Project</Link>
+              <Link to="/My/Contact">Contact</Link>
           </div>
         </div>
         <header>
@@ -38,9 +38,9 @@ function App() {
           <Navigation id="navigation" />
         </header>
         <div className="content">
-          <Route path="/" exact={true} component={AboutMe} />
-          <Route path="/Project" component={Project} />
-          <Route path="/Contact" component={Contact} />
+          <Route path="/My/" exact={true} component={AboutMe} />
+          <Route path="/My/Project" component={Project} />
+          <Route path="/My/Contact" component={Contact} />
         </div>
         <footer>
           <span>ⓒ 2021 유인섭 all rights reserved.</span>

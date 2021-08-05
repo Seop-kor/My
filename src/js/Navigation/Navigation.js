@@ -5,6 +5,12 @@ function Navigation() {
     useEffect(function () {
         const togg = document.getElementById("toggle");
         const checknav = document.getElementById("checknav-wrapper");
+        window.onclick = (e) => {
+            if(e.target === checknav){
+                togg.classList.toggle("active");
+                checknav.classList.toggle("active");
+            }
+        };
         togg.addEventListener("click", () => {
             togg.classList.toggle("active");
             checknav.classList.toggle("active");
@@ -22,13 +28,13 @@ function Navigation() {
             </div>
             <div className="nav_wrapper" id="nav_wrapper">
                 <div className="navigation_item active">
-                    <Link to="/">About Me</Link>
+                    <Link to="/My/">About Me</Link>
                 </div>
                 <div className="navigation_item">
-                    <Link to="/project">Project</Link>
+                    <Link to="/My/project">Project</Link>
                 </div>
                 <div className="navigation_item">
-                    <Link to="/Contact">Contact</Link>
+                    <Link to="/My/Contact">Contact</Link>
                 </div>
             </div>
         </nav>

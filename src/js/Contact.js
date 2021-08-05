@@ -73,7 +73,8 @@ function Contact() {
                     if (link1.y <= ypos && ypos <= link1.ymax) {
                         link[0].click();
                     }
-                }else if (link2.x <= xpos && xpos <= link2.xmax) {
+                }
+                if (link2.x <= xpos && xpos <= link2.xmax) {
                     if (link2.y <= ypos && ypos <= link2.ymax) {
                         link[1].click();
                     }
@@ -171,12 +172,12 @@ function Contact() {
                         <div className="contact-item">
                             <img src={mail} alt="mail" className="icon"></img>
                             <div className="shadow"></div>
-                            <a className="link" href="mailto:dkdn1004@naver.com">dkdn1004@naver.com</a>
+                            <a className="m-link" href="mailto:dkdn1004@naver.com">dkdn1004@naver.com</a>
                         </div>
                         <div className="contact-item">
                             <img src={git} alt="git" className="icon"></img>
                             <div className="shadow"></div>
-                            <a className="link" href="https://github.com/Seop-kor">Seop-kor</a>
+                            <a className="m-link" href="https://github.com/Seop-kor">Seop-kor</a>
                         </div>
                     </div>
                 </div>
